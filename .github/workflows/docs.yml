@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: VuePress Build
         run: |
-          yarn && yarn docs:deploy
+          yarn && yarn docs:build
       
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1.0.6
