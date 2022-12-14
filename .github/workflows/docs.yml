@@ -33,7 +33,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1.0.6
         with:
-          path: docs/.vuepress/dist/
+          path: docs/.vuepress/dist
   
   deploy:
     needs: build
@@ -43,7 +43,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deploymnet.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
